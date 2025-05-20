@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: your-web-service
-    runtime: docker
-    plan: free
-    env: docker
-    buildCommand: "./build.sh"
-    startCommand: "./start.sh"
