@@ -164,7 +164,6 @@ SIMPLE_JWT = {
 
 # Custom settings
 SITE_NAME = os.getenv('SITE_NAME', 'ZeBrands Product Catalog')
-ADMIN_URL = os.getenv('ADMIN_URL', 'http://localhost:8000/admin/')
 
 CORS_ALLOW_ALL_ORIGINS = True  # No usar en producción
 
