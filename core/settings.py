@@ -29,10 +29,12 @@ load_dotenv(dotenv_path)
 SECRET_KEY = 'django-insecure-y_mgm6a02lb)+@v!x-2-9!2h7#g=5mlrzn4j@h_(6!8(j)e*(g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',') if os.getenv('ALLOWED_HOSTS') else ['*']
 
-ALLOWED_HOSTS = []
-
+# Añade configuración para static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
 
 # Application definition
 
